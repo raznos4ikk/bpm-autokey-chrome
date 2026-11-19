@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "BPM и тональность",
+  "version": "1.0.0",
+  "description": "Определяет BPM и тональность бита на любой вкладке: YouTube, SoundCloud и других. Звук продолжает играть как обычно.",
+  "minimum_chrome_version": "116",
+  "permissions": [
+    "tabCapture",
+    "offscreen",
+    "activeTab",
+    "storage",
+    "alarms"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Определить BPM и тональность",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "host_permissions": [
+  "https://lair-analytics.lair-tools-282.workers.dev/*"
+]
+}

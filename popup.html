@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BPM и тональность</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="top">
+    <svg class="mark" viewBox="0 0 52 52" aria-hidden="true">
+      <circle cx="26" cy="26" r="22"/><circle cx="26" cy="26" r="16"/>
+      <path d="M26 5 29 20 44 26 29 32 26 47 23 32 8 26 23 20Z"/>
+      <path d="M17 17 35 35M35 17 17 35"/>
+      <circle cx="26" cy="26" r="4" class="core"/>
+    </svg>
+    <div class="heading">
+      <h1>BPM & TONALITY</h1>
+      <p id="tabTitle" class="tab-title">Текущая вкладка</p>
+    </div>
+    <span class="version">01</span>
+  </header>
+
+  <p id="status" class="status" role="status" aria-live="polite">
+    <span class="dot" id="dot"></span><span id="statusText">Подключаюсь к звуку вкладки…</span>
+  </p>
+
+  <main id="panel" class="panel">
+    <section class="block" aria-labelledby="h-bpm">
+      <h2 id="h-bpm">TEMPO <span>01</span></h2>
+      <div class="value-row">
+        <span class="big" id="bpm">—</span>
+        <span class="unit">BPM</span>
+        <span class="pulse" id="pulse" aria-hidden="true"></span>
+      </div>
+      <p class="note" id="bpmNote"></p>
+      <div class="chips" id="chips"></div>
+      <div class="conf">
+        <div class="bar"><i id="bpmBar"></i></div>
+        <span id="bpmConf">Уверенность: —</span>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="h-key">
+      <h2 id="h-key">KEY <span>02</span></h2>
+      <div class="value-row">
+        <span class="big key" id="key">—</span>
+        <span class="camelot" id="camelot" hidden></span>
+      </div>
+      <p class="note" id="keyNote"></p>
+      <div class="conf">
+        <div class="bar"><i id="keyBar"></i></div>
+        <span id="keyConf">Уверенность: —</span>
+      </div>
+    </section>
+  </main>
+
+  <section id="errorBox" class="error" hidden>
+    <p id="errorText"></p>
+  </section>
+
+  <div class="actions">
+    <button id="copy" class="btn primary" type="button">Копировать</button>
+    <button id="reset" class="btn" type="button">Заново</button>
+    <button id="stop" class="btn" type="button">Стоп</button>
+  </div>
+
+
+  <script src="popup.js"></script>
+</body>
+</html>
